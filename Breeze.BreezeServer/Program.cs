@@ -65,11 +65,11 @@ namespace Breeze.BreezeServer
             // Check OS-specific default config path for the config file. Create default file if it does not exist
             string configDir = BreezeConfiguration.GetDefaultDataDir("BreezeServer");
             if (isRegTest)
-                configDir = Path.Combine(configDir, "StratisRegTest");
+                configDir = Path.Combine(configDir, "ImpleumRegTest");
             else if (isTestNet)
-                configDir = Path.Combine(configDir, "StratisTest");
+                configDir = Path.Combine(configDir, "ImpleumTest");
             else
-                configDir = Path.Combine(configDir, "StratisMain");
+                configDir = Path.Combine(configDir, "ImpleumMain");
 
             string configPath = Path.Combine(configDir, "breeze.conf");
 

@@ -50,7 +50,7 @@ namespace Breeze.BreezeServer
                     builder.AppendLine("#tor.enabled=");
                     builder.AppendLine("#rpc.user=");
                     builder.AppendLine("#rpc.password=");
-                    builder.AppendLine("#rpc.url=http://127.0.0.1:16174");
+                    builder.AppendLine("#rpc.url=http://127.0.0.1:16172");
                     builder.AppendLine("#breeze.ipv4=");
                     builder.AppendLine("#breeze.ipv6=");
                     builder.AppendLine("#breeze.onion=");

@@ -11,6 +11,14 @@
     "StratisTest": {
       "commandName": "Project",
       "commandLineArgs": "stratis -testnet"
+    },
+    "Breeze.Daemon.Impleum Main": {
+      "commandName": "Project",
+      "commandLineArgs": "-impleum -light -registration -regtest -port=18101 -apiport=19101 -connect=127.0.0.1:18001 -connect=127.0.0.1:28001 -datadir=C:\\NodeData\\TBRegTestA -noTor -tumblerProtocol=http"
+    },
+    "ImpleumTest": {
+      "commandName": "Project",
+      "commandLineArgs": "-stratis -testnet"
     }
   }
 }

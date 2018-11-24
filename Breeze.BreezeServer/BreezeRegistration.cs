@@ -101,10 +101,10 @@ namespace Breeze.BreezeServer
 
         public Transaction PerformBreezeRegistration(BreezeConfiguration config, string regStorePath, string configurationHash, string onionAddress, RsaKey tumblerKey)
         {
-			Network network = Network.StratisMain;
+			Network network = Network.ImpleumMain;
 			if (config.TumblerNetwork == Network.TestNet || config.TumblerNetwork == Network.RegTest)
 			{
-				network = Network.StratisTest;
+				network = Network.ImpleumTest;
 			}
 
             RPCHelper stratisHelper = null;
@@ -205,10 +205,10 @@ namespace Breeze.BreezeServer
 
         public bool VerifyCollateral(BreezeConfiguration config, out Money missingFunds)
         {
-            Network network = Network.StratisMain;
+            Network network = Network.ImpleumMain;
             if (config.TumblerNetwork == Network.TestNet || config.TumblerNetwork == Network.RegTest)
             {
-                network = Network.StratisTest;
+                network = Network.ImpleumTest;
             }
 
             var stratisHelper = new RPCHelper(network);
