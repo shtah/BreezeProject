@@ -110,8 +110,8 @@ namespace Breeze.Registration
             this.logger.LogTrace("()");
 
             // For RegTest, it is not clear that re-issuing a sync command will be beneficial. Generally you want to sync from genesis in that case.
-            var syncHeight = this.network == Network.StratisMain ? SyncHeightMain :
-                this.network == Network.StratisTest ? SyncHeightTest : SyncHeightRegTest;
+            var syncHeight = this.network == Network.ImpleumMain ? SyncHeightMain :
+                this.network == Network.ImpleumTest ? SyncHeightTest : SyncHeightRegTest;
 
             this.logger.LogInformation("No registrations have been found; Syncing from height {0} in order to get masternode registrations", syncHeight);
 

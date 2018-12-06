@@ -40,12 +40,12 @@ namespace NTumbleBit.ClassicTumbler.Server.CLI
             string dataDir;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                dataDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "StratisNode");
+                dataDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ImpleumNode");
                 dataDir = argsConf.GetOrDefault<string>("dataDir", dataDir);
             }
             else
             {
-                dataDir = Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".stratisnode");
+                dataDir = Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".impleumnode");
                 dataDir = argsConf.GetOrDefault<string>("dataDir", dataDir);
             }
 

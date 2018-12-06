@@ -193,9 +193,9 @@ namespace Breeze.Daemon
                 if (string.IsNullOrEmpty(dataDir))
                 {
                     if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                        dataDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), isImpleum ? "ImpleumNode" : "StratisNode");
+                        dataDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ImpleumNode");
                     else
-                        dataDir = Path.Combine(Environment.GetEnvironmentVariable("HOME"), isImpleum ? ".impleumnode" : ".stratisnode");
+                        dataDir = Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".impleumnode");
                 }
 
                 string logDir = Path.Combine(dataDir, nodeSettings.Network.RootFolderName, nodeSettings.Network.Name, "Logs");
