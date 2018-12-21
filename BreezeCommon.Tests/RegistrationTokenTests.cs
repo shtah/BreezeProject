@@ -17,7 +17,7 @@ namespace BreezeCommon.Tests
 		public void CanValidateRegistrationToken()
 		{
 			var rsa = new RsaKey();
-			var ecdsa = new Key().GetBitcoinSecret(Network.StratisMain);
+			var ecdsa = new Key().GetBitcoinSecret(Network.ImpleumMain);
 
 			var serverAddress = ecdsa.GetAddress().ToString();
 			
@@ -34,7 +34,7 @@ namespace BreezeCommon.Tests
 			token.RsaSignature = cryptoUtils.SignDataRSA(token.GetHeaderBytes().ToArray());
 			token.EcdsaSignature = cryptoUtils.SignDataECDSA(token.GetHeaderBytes().ToArray());
 
-			Assert.True(token.Validate(Network.StratisMain));
+			Assert.True(token.Validate(Network.ImpleumMain));
 		}
 	}
 }

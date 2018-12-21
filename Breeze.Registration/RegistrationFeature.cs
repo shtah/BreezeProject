@@ -16,8 +16,8 @@ namespace Breeze.Registration
 {
     public class RegistrationFeature : FullNodeFeature
     {
-        private const int SyncHeightMain = 928942;
-        private const int SyncHeightTest = 499079;
+        private const int SyncHeightMain = 300000;
+        private const int SyncHeightTest = 10000;
         private const int SyncHeightRegTest = 0;
         private readonly ILogger logger;
         private readonly RegistrationStore registrationStore;

@@ -23,7 +23,7 @@ namespace BreezeCommon.Tests
 		public void RegistrationStoreAddTest()
 		{
 			var rsa = new RsaKey();
-			var ecdsa = new Key().GetBitcoinSecret(Network.StratisMain);
+			var ecdsa = new Key().GetBitcoinSecret(Network.ImpleumMain);
 			
             var token = new RegistrationToken(255,
                                               "1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2",
@@ -154,7 +154,7 @@ namespace BreezeCommon.Tests
 	    public void CheckSignatureOfRegistrationToken()
 	    {
 		    var rsa = new RsaKey();
-		    var ecdsa = new Key().GetBitcoinSecret(Network.StratisMain);
+		    var ecdsa = new Key().GetBitcoinSecret(Network.ImpleumMain);
 		    
 		    var token = new RegistrationToken(1,
 			    "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
@@ -181,7 +181,7 @@ namespace BreezeCommon.Tests
 	    public void CanVerifySignature()
 	    {   
 		    var rsa = new RsaKey();
-		    var ecdsa = new Key().GetBitcoinSecret(Network.StratisMain);
+		    var ecdsa = new Key().GetBitcoinSecret(Network.ImpleumMain);
 		    
 		    var token = new RegistrationToken(1,
 			    "175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W",
